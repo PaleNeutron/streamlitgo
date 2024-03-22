@@ -8,7 +8,7 @@ This package will load `stgo.py` in current working directory before the streaml
 
 For example:
 
-- add some command before each script run
+- add some code before each page run
 - add a custom endpoint to the streamlit server
 - get current authenticated user info by custom header
 
