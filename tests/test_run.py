@@ -1,14 +1,15 @@
-from multiprocessing import Process
 import os
-from pathlib import Path
 import signal
 import time
+from multiprocessing import Process
+from pathlib import Path
 
 from streamlitgo.cli import main
 
 
 def test_streamlit_run(capfd):
     import sys
+
     sys.argv = ["streamlitgo", "hello", "--server.headless", "true"]
     os.chdir(Path(__file__).parent)
     p = Process(target=main)
@@ -23,8 +24,6 @@ def test_streamlit_run(capfd):
         p.terminate()
         p.kill()
         p.join()
-
-
 
 
 if __name__ == "__main__":

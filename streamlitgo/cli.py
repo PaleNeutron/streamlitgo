@@ -1,7 +1,9 @@
 import importlib.util
 import os
 import sys
+
 from streamlit.logger import get_logger
+
 logger = get_logger(__name__)
 
 
@@ -18,7 +20,9 @@ def main():
         logger.info(f"No fixed setup script found at {fixed_setup_script_path}, skipping")
 
     from streamlit.web.cli import main as stmain  # isort:skip
+
     stmain()
+
 
 if __name__ == "__main__":
     main()

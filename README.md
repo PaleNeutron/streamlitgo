@@ -1,14 +1,8 @@
+https://github.com/PaleNeutron/streamlitgo
+
 # Streamlit GO
 
 Package for loading a script before streamlit server start
-
-## Installation
-
-```bash
-pip install streamlitgo
-```
-
-## Usage
 
 This package will load `stgo.py` in current working directory before the streamlit server starts. You can use this to patch the streamlit server or to load some data before the server starts!
 
@@ -17,6 +11,14 @@ For example:
 - add some command before each script run
 - add a custom endpoint to the streamlit server
 - get current authenticated user info by custom header
+
+## Installation
+
+```bash
+pip install streamlitgo
+```
+
+## Usage
 
 Just use `streamlitgo` instead of `streamlit` in your command line.
 
