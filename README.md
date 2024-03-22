@@ -18,7 +18,7 @@ pip install streamlitgo
 
 ## Usage
 
-Just use `streamlitgo` instead of `streamlit` in your command line.
+Just create your own `stgo.py` in your working directory and use `streamlitgo` instead of `streamlit` in your command line.
 
 ```bash
 streamlitgo run your_script.py
