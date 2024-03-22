@@ -1,5 +1,3 @@
-https://github.com/PaleNeutron/streamlitgo
-
 # Streamlit GO
 
 Package for loading a script before streamlit server start
