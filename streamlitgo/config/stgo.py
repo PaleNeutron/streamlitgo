@@ -29,13 +29,13 @@ class MyBrowserWebSocketHandler(BrowserWebSocketHandler):
         ret = super().open(*args, **kwargs)
         session = self._runtime._session_mgr.get_session_info(self._session_id).session
         email = self.request.headers.get("x-auth-request-email", "bob@Alice.com")
-        remote_ip = self.request.headers.get("X-Real-IP", "192.168.1.1")
+        remote_ip = self.request.headers.get("X-Forwarded-For", "192.168.1.1")
         all_headers = list(self.request.headers.get_all())
         # script_path = "streamlitgo/__main__.py"
         # logger.error(f"{email} [{ip}] access script {script_path}")
         user = session._user_info
         user["email"] = email
-        user["ip"] = remote_ip
+        user["ip"] = remote_ip.split(",")[0].strip()
         user["all_headers"] = all_headers
         return ret
 
