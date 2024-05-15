@@ -34,7 +34,7 @@ class MyBrowserWebSocketHandler(BrowserWebSocketHandler):
         # logger.error(f"{email} [{ip}] access script {script_path}")
         user = session._user_info
         user["email"] = email
-        user["remote_ip"] = remote_ip
+        user["ip"] = remote_ip
         return ret
 
 
