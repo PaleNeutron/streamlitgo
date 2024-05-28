@@ -1,5 +1,4 @@
 import os
-import signal
 import time
 from multiprocessing import Process
 from pathlib import Path
