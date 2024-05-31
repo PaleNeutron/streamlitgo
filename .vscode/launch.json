@@ -5,13 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python Debugger: Module",
+            "name": "hello",
             "type": "debugpy",
             "request": "launch",
             "module": "streamlitgo",
             "justMyCode": false,
-            "args": ["hello"],
-            "cwd": "${workspaceFolder}/tests",
+            "args": ["hello", "--server.headless", "true"],
+            "cwd": "${workspaceFolder}",
             "env": {
                 "PYTHONPATH": "${workspaceFolder}"
             }

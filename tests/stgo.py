@@ -16,7 +16,7 @@ class MyScriptCache(ScriptCache):
     def get_bytecode(self, script_path: str) -> T.Any:
         user = _get_user_info()
         email = user.get("email", "")
-        remote_ip = user.get("remote_ip", "")
+        remote_ip = user.get("ip", "")
         logger.info(f"{email} [{remote_ip}] access script {script_path}")
         return super().get_bytecode(script_path)
 
@@ -34,7 +34,7 @@ class MyBrowserWebSocketHandler(BrowserWebSocketHandler):
         # logger.error(f"{email} [{ip}] access script {script_path}")
         user = session._user_info
         user["email"] = email
-        user["remote_ip"] = remote_ip
+        user["ip"] = remote_ip
         return ret
 
 

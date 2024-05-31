@@ -32,12 +32,12 @@ class MyBrowserWebSocketHandler(BrowserWebSocketHandler):
         remote_ip = self.request.headers.get("X-Forwarded-For", "192.168.1.1")
         # X-Auth-Request-Preferred-Username
         preferred_username = (
-            self.request.headers.get("x-auth-request-preferred-username", b"Bob")
+            self.request.headers.get("x-auth-request-preferred-username", "Bob")
             .encode("ISO-8859-1")
             .decode()
         )
         name = (
-            self.request.headers.get("x-auth-request-user", b"Bob")
+            self.request.headers.get("x-auth-request-user", "Bob")
             .encode("ISO-8859-1")
             .decode()
         )
