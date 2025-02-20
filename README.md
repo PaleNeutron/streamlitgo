@@ -1,5 +1,7 @@
 # Streamlit GO
 
+[![PyPI Latest Release](https://img.shields.io/pypi/v/streamlitgo.svg)](https://pypi.org/project/streamlitgo/)
+
 Package for loading a script before streamlit server start
 
 This package will load `stgo.py` in current working directory before the streamlit server starts. You can use this to patch the streamlit server or to load some data before the server starts!
